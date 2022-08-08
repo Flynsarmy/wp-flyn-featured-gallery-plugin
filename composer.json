@@ -1,0 +1,36 @@
+{
+    "name": "flynsarmy/flyn-syntax",
+    "description": "Flyn-Syntax provides clean syntax highlighting for embedding source code within pages or posts.",
+    "type": "wordpress-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "flynsarmy",
+            "email": "flynsarmy@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Flyn\\FeaturedGallery\\": "FlynFeaturedGallery"
+        }
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.7",
+        "php-stubs/wordpress-stubs": "^6",
+        "szepeviktor/phpstan-wordpress": "^1.1"
+    },
+    "scripts": {
+        "phpstan": "php -d memory_limit=-1 ./vendor/bin/phpstan analyse",
+        "phpcbf": "vendor/bin/phpcbf --standard=./.phpcs.xml ./",
+        "phpcs":  "vendor/bin/phpcs  -s --standard=./.phpcs.xml ./",
+        "phpcompat": "vendor/bin/phpcs --standard=PHPCompatibility --runtime-set testVersion 7.4 ./",
+        "phpunit": "vendor/bin/phpunit ./tests/Unit/",
+        "coverage": "vendor/bin/phpunit tests/unit --coverage-html coverage --whitelist src/",
+        "lint": "vendor/bin/parallel-lint --exclude vendor .",
+        "test": [
+            "composer validate --strict",
+            "@phpcs",
+            "@phpstan"
+        ]
+    }
+}
