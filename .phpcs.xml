@@ -11,6 +11,10 @@
         <exclude-pattern>flyn-featured-gallery.php</exclude-pattern>
     </rule>
 
+    <rule ref="PSR1.Files.SideEffects.FoundWithSymbols">
+        <exclude-pattern>flyn-featured-gallery.php</exclude-pattern>
+    </rule>
+
     <file>flyn-featured-gallery.php</file>
     <file>FlynFeaturedGallery/*</file>
 

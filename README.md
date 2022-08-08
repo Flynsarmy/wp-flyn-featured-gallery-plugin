@@ -16,9 +16,37 @@ Want to contribute? Flyn Featured Gallery can be found [on Github](https://githu
 
 ## Usage
 
-### Gutenberg
+### Admin (Gutenberg)
 
 Create a post/page and click *Set gallery images* on the right of any post type add/edit page in admin.
+
+### Frontend
+
+Display your posts gallery with `echo get_the_post_gallery();`
+
+
+## Documentation
+
+The following function has been defined for use on the frontend:
+
+```php
+get_the_post_gallery( int|WP_Post $post = null, string $size = 'post-thumbnail'  )
+```
+
+### Parameters
+#### $post
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*(int|WP_Post) (Optional)* Post ID or WP_Post object. Default is global $post.
+
+Default value: null
+
+#### $size
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*(string|int[]) (Optional)* Image size. Accepts any registered image size name.
+
+*Default value: 'post-thumbnail'*
+
+### Return
+
+*(string)* Gallery shortcode HTML.
 
 
 ## Changelog
