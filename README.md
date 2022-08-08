@@ -1,4 +1,4 @@
-# Flyn Featured Galleries
+# Flyn Featured Gallery for WordPress
 
 [![Software License](https://img.shields.io/badge/license-GPLv2-brightgreen.svg?style=flat-square)](LICENSE.md)
 ![Build Status - PHP](https://github.com/Flynsarmy/wp-flyn-featured-gallery-plugin/workflows/CI%20-%20PHP/badge.svg)
